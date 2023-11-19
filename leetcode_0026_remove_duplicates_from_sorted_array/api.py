@@ -1,8 +1,20 @@
 """API for solving problem Remove Duplicates from Sorted Array"""
 
+LEN_MAX = 3 * 10**4
+LEN_MIN = 1
+
+NUM_MAX = 100
+NUM_MIN = -NUM_MAX
+
 
 def _check_preconditions(nums: list[int]) -> bool:
-    pass
+    if not LEN_MIN <= len(nums) <= LEN_MAX:
+        return False
+
+    if not all(NUM_MIN <= x <= NUM_MAX for x in nums):
+        return False
+
+    return True
 
 
 def remove_duplicates_from_sorted_array(nums: list[int]) -> int:
