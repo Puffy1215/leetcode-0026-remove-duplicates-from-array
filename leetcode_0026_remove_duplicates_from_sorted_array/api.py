@@ -14,6 +14,9 @@ def _check_preconditions(nums: list[int]) -> bool:
     if not all(NUM_MIN <= x <= NUM_MAX for x in nums):
         return False
 
+    if not nums == sorted(nums):
+        return False
+
     return True
 
 
