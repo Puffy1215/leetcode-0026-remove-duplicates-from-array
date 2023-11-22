@@ -25,4 +25,13 @@ def remove_duplicates_from_sorted_array(nums: list[int]) -> int:
 
     assert _check_preconditions(nums)
 
-    pass
+    m = len(nums)
+    i = 0
+    j = 1
+    for j in range(1, m):
+        if nums[i] == nums[j]:
+            continue
+        i = i + 1
+        nums[i] = nums[j]
+
+    return i
