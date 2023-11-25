@@ -34,4 +34,4 @@ def remove_duplicates_from_sorted_array(nums: list[int]) -> int:
         i = i + 1
         nums[i] = nums[j]
 
-    return i
+    return i + 1
